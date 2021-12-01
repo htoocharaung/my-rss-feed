@@ -99,8 +99,8 @@ def create_feed_checker(feed_url):
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
-                    mirr_msg = f"{mirr_cmd} {entry.link}"
-                    app2.send_message(mirr_chat, mirr_msg)
+                    msg = app2.send_message(mirr_chat, mirr_msg)
+                    msg.reply_text("/mirror6")
             except FloodWait as e:
                 print(f"FloodWait: {e.x} seconds")
                 sleep(e.x)
