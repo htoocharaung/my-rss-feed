@@ -82,7 +82,7 @@ def create_feed_checker(feed_url):
                 break
 
             # ↓ Edit this message as your needs.
-                message = f'**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>'
+                message = f"**{entry.title}**\n[⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜]({entry.link})"
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
