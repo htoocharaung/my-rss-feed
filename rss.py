@@ -82,7 +82,7 @@ def create_feed_checker(feed_url):
                 break
 
             # ↓ Edit this message as your needs.
-            message = f'**{entry.title}**\n[⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜]({entry.torznab_magneturl})"
+            message = f'**{entry.title}**\n[⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜]({entry.torznab_magneturl})'
 })'
             try:
                 app.send_message(log_channel, message)
