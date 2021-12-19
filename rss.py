@@ -58,7 +58,7 @@ def create_feed_checker(feed_url):
         last_id_from_db = db.get_link(feed_url).link
 
         if last_id_from_db == "*":
-            message = f"**{first_entry.title}**\n{first_entry.torznab_magneturl}"
+            message = f"**{first_entry.title}**\n{first_entry.magneturl}"
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
@@ -82,8 +82,8 @@ def create_feed_checker(feed_url):
                 break
 
             # ↓ Edit this message as your needs.
-            message = f"**{entry.title}**\n[⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜]({entry.torznab_magneturl})"
-            try:
+            message = f"**{entry.title}**\n[⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜]({entry.magneturl})"
+            
                 app.send_message(log_channel, message)
                 if app2 is not None:
                     mirr_msg = f"{mirr_cmd} {entry.link}"
