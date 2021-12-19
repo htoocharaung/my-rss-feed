@@ -82,8 +82,7 @@ def create_feed_checker(feed_url):
                 break
 
             # ↓ Edit this message as your needs.
-            message = f"**{entry.title}**\n[⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜]({entry.magneturl})"
-            
+            message = f"**{entry.title}**\n[⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜]({entry.magneturl})"           
                 app.send_message(log_channel, message)
                 if app2 is not None:
                     mirr_msg = f"{mirr_cmd} {entry.link}"
