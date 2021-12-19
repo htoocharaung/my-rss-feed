@@ -83,19 +83,19 @@ def create_feed_checker(feed_url):
 
             # ↓ Edit this message as your needs.
             if "eztv.re" in entry.link:   
-                message = f"**{entry.title}**\n<a href="{entry.links[1]['href']}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}"
+                message = f'**{entry.title}**\n<a href="{entry.links[1]['href']}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}'
             elif "yts.mx" in entry.link:
-                message = f"**{entry.title}**\n<a href="{entry.links[1]['href']}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}"
+                message = f'**{entry.title}**\n<a href="{entry.links[1]['href']}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}'
             elif "torlock" in entry.link:
-                message = f"**{entry.title}**\n<a href="{entry.links[1]['href']}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}"
+                message = f'**{entry.title}**\n<a href="{entry.links[1]['href']}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}'
             elif "watercache" in entry.link:
-                message = f"**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}"
+                message = f'**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}'
             elif "rarbg" in entry.link:
-                message = f"**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}"
+                message = f'**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}'
             elif "etorrent.click" in entry.link:
-                message = f"**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}"
+                message = f'**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}'
             else:
-                message = f"**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}"
+                message = f'**{entry.title}**\n<a href="{entry.link}">⚜ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ ⚜</a>}'
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
