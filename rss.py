@@ -58,7 +58,7 @@ def create_feed_checker(feed_url):
         last_id_from_db = db.get_link(feed_url).link
 
         if last_id_from_db == "*":
-            message = f"**{first_entry.title}**\n```{entry.magneturl.value}```"
+            message = f"**{first_entry.title}**\n```{first_entry.magneturl.value}```"
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
