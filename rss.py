@@ -83,7 +83,7 @@ def create_feed_checker(feed_url):
 
             # ↓ Edit this message as your needs.
             if "eztv.re" in entry.link:   
-                message = f"**{entry.title}**\n```{entry.torrent_magneturi}```"
+                message = f"**{entry.title}**\n```{entry.links[1]['href']}```"
             elif "yts.mx" in entry.link:
                 message = f"**{entry.title}**\n```{entry.links[1]['href']}```"
             elif "torlock" in entry.link:
@@ -100,7 +100,7 @@ def create_feed_checker(feed_url):
                 app.send_message(log_channel, message)
                 if app2 is not None:
                     if "eztv.re" in entry.link:                        
-                        mirr_msg = f"{mirr_cmd} {entry.torrent_magneturi}"
+                        mirr_msg = f"{mirr_cmd} {entry.links[1]['href']}"
                         app2.send_message(mirr_chat, mirr_msg)
                     elif "yts.mx" in entry.link:
                         mirr_msg = f"{mirr_cmd} {entry.links[1]['href']}"
