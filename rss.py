@@ -105,7 +105,7 @@ def create_feed_checker(feed_url):
                     elif "yts.mx" in entry.link:
                         mirr_msg = f"{mirr_cmd} {entry.links[1]['href']}"
                         app2.send_message(mirr_chat, mirr_msg)
-                    elif "Fitgirl" in entry.link:
+                    elif "Fitgirl" in entry.title:
                         mirr_msg = f"/zipmirror6 {entry.link}"
                         app2.send_message(mirr_chat, mirr_msg)
                     else:
