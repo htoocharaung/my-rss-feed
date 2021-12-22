@@ -58,7 +58,7 @@ def create_feed_checker(feed_url):
         last_id_from_db = db.get_link(feed_url).link
 
         if last_id_from_db == "*":
-            message = f"**{first_entry.title}**\n```{first_entry.link}```"
+            message = f"**{first_entry.title}**\n```{first_entry.guid}```"
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
@@ -95,7 +95,7 @@ def create_feed_checker(feed_url):
             elif "etorrent.click" in entry.link:
                 message = f"**{entry.title}**\n```{entry.link}```"
             else:
-                message = f"**{entry.title}**\n```{entry.link}```"
+                message = f"**{entry.title}**\n```{entry.guid}```"
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
@@ -109,7 +109,7 @@ def create_feed_checker(feed_url):
                         mirr_msg = f"/zipmirror6 {entry.link}"
                         app2.send_message(mirr_chat, mirr_msg)
                     else:
-                        mirr_msg = f"{mirr_cmd} {entry.link}"
+                        mirr_msg = f"{mirr_cmd} {entry.guid}"
                         app2.send_message(mirr_chat, mirr_msg)
             except FloodWait as e:
                 print(f"FloodWait: {e.x} seconds")
